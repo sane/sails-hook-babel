@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-6to5",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sails JS hook to activate traceur for the whole api folder",
   "main": "index.js",
   "scripts": {
