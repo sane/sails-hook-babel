@@ -16,7 +16,7 @@ describe('Acceptance tests', function() {
       Sails().lift({
         hooks: {
           // Load the hook
-          "6to5": require('../../'),
+          "babel": require('../../'),
           // Skip grunt
           "grunt": false
         },
