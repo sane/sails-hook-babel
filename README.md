@@ -1,13 +1,13 @@
-# sails-hook-traceur
-[![npm version](https://badge.fury.io/js/sails-hook-babel.svg)](https://npmjs.org/package/sails-hook-traceur) [![Dependency Status](https://img.shields.io/david/artificialio/sails-hook-babel.svg?style=flat)](https://david-dm.org/artificialio/sails-hook-traceur)
+# sails-hook-babel
+[![npm version](https://badge.fury.io/js/sails-hook-babel.svg)](https://npmjs.org/package/sails-hook-babel) [![Dependency Status](https://img.shields.io/david/artificialio/sails-hook-babel.svg?style=flat)](https://david-dm.org/artificialio/sails-hook-babel)
 
-*Needs at least Sails version 0.11-rc to work*
+*Needs at least Sails version 0.11.0 to work*
 
 [Sails JS](http://sailsjs.org) hook to activate ES6/7 Javascript code for your whole sails app, via [https://babeljs.io/](https://babeljs.io/).
 
 ### Installation
 
-`npm install sails-hook-6to5`
+`npm install sails-hook-babel`
 
 ### Usage
 
