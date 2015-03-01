@@ -19,6 +19,8 @@ By default, configuration lives in `sails.config.babel`.  The configuration key 
 
 Parameter      | Type                | Details
 -------------- | ------------------- |:---------------------------------
-compile        | ((boolean)) | Whether or not sails should compile/allow ES6/7 code.  Defaults to `true`.
+compile        | ((boolean)) | Whether or not sails should compile future JS code.  Defaults to `true`.
+experimental   | ((boolean)) | Whether or not use babel [experimental]((http://babeljs.io/docs/usage/experimental/)) mode.  Defaults to `true`.
+loose          | ((boolean)) | Whether or not use babel's [loose](http://babeljs.io/docs/usage/loose/) mode.  Defaults to `true`.
 
 That&rsquo;s it!

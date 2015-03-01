@@ -14,7 +14,12 @@ module.exports = function(sails) {
 
       __configKey__: {
         // Turn babel compile on by default
-        compile: true
+        compile: true,
+        //Activates experimental functionality such as ES7 async/await
+        experimental: true,
+        //See http://babeljs.io/docs/usage/loose
+        //Can be "all", false or a an array, e.g. ["es6.classes", "es6.properties.computed"]
+        loose: "all"
       }
     },
 
@@ -32,7 +37,8 @@ module.exports = function(sails) {
         //Load babel and override the default require; with experimental features,
         //such as async/await.
         require("babel/register")({
-          experimental: true
+          experimental: sails.config[this.configKey].experimental,
+          loose: sails.config[this.configKey].loose
         });
 
 
