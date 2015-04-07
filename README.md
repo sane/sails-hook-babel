@@ -20,7 +20,10 @@ By default, configuration lives in `sails.config.babel`.  The configuration key 
 Parameter      | Type                | Details
 -------------- | ------------------- |:---------------------------------
 compile        | ((boolean)) | Whether or not sails should compile future JS code.  Defaults to `true`.
-experimental   | ((boolean)) | Whether or not use babel [experimental]((http://babeljs.io/docs/usage/experimental/)) mode.  Defaults to `true`.
+stage   | ((integer)) | Which [stage](http://babeljs.io/docs/usage/experimental/) of Proposals to use 0 being the most experimental.  Defaults to 2.
 loose          | ((boolean)) | Whether or not use babel's [loose](http://babeljs.io/docs/usage/loose/) mode.  Defaults to `true`.
+ignore          | ((boolean/Regex)) | Can be `false` or a regex of what to ignore. For default mode see http://babeljs.io/docs/usage/require/
+only          | ((Regex)) | Whether or not use babel's [loose](http://babeljs.io/docs/usage/loose/) mode. For default mode see http://babeljs.io/docs/usage/require/
+extensions          | ((array)) | Pass an array of extensions, such as ['.js', '.es'].  For default mode see http://babeljs.io/docs/usage/require/
 
 That&rsquo;s it!

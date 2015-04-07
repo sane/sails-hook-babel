@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-babel",
-  "version": "2.1.0",
+  "version": "5.0.0",
   "description": "Sails JS hook to activate babel for the whole api folder",
   "main": "index.js",
   "scripts": {
@@ -22,11 +22,11 @@
     "isHook": true
   },
   "dependencies": {
-    "babel": "^4.6.3"
+    "babel": "^5.0.9"
   },
   "devDependencies": {
-    "glob": "^4.4.1",
-    "mocha": "^2.1.0",
+    "glob": "^5.0.3",
+    "mocha": "^2.2.1",
     "sails": "~0.11.0"
   },
   "contributors": [
