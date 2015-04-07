@@ -60,8 +60,6 @@ module.exports = function(sails) {
           options.extensions = sails.config[this.configKey].extensions;
         }
 
-        console.log(options);
-
         require("babel/register")(options);
 
 
