@@ -12,6 +12,17 @@
     "type": "git",
     "url": "git://github.com/artificialio/sails-hook-babel.git"
   },
+  ,
+  "keywords": [
+    "sails",
+    "hook",
+    "babel",
+    "transpiler",
+    "ES6",
+    "ES2015",
+    "ES7"
+    "sails-hook"
+  ]
   "author": "Markus Padourek",
   "license": "MIT",
   "bugs": {
