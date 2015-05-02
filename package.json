@@ -19,7 +19,7 @@
     "transpiler",
     "ES6",
     "ES2015",
-    "ES7"
+    "ES7",
     "sails-hook"
   ],
   "author": "Markus Padourek",
