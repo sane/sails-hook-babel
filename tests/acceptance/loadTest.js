@@ -35,7 +35,7 @@ describe('Acceptance tests', function() {
     //return done();
   });
 
-  it ('sails loads traceur hook and does not crash', function() {
+  it ('sails loads babel hook and does not crash', function() {
     return true
   });
 
