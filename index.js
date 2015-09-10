@@ -1,4 +1,6 @@
-var path = require('path');
+var path = require('path')
+  , _ = require('lodash')
+  , babelRegister = require('babel/register');
 module.exports = function(sails) {
 
   return {
@@ -31,7 +33,6 @@ module.exports = function(sails) {
 
     /**
      * Initialize the hook
-     * @param  {Function} cb Callback for when we're done initializing
      */
     configure: function() {
 
@@ -43,30 +44,47 @@ module.exports = function(sails) {
         //Load babel and override the default require; with experimental features,
         //such as async/await.
 
-        var options = {
-          loose: sails.config[this.configKey].loose,
-          stage: sails.config[this.configKey].stage
-        };
-
-        if (sails.config[this.configKey].ignore !== null) {
-          options.ignore = sails.config[this.configKey].ignore;
-        }
-
-        if (sails.config[this.configKey].only) {
-          options.only = sails.config[this.configKey].only;
-        }
-
-        if (sails.config[this.configKey].extensions) {
-          options.extensions = sails.config[this.configKey].extensions;
-        }
-
-        require("babel/register")(options);
-
+        babelRegister(_.pick(
+          sails.config[this.configKey],
+          [
+            'blacklist',
+            'whitelist',
+            'loose',
+            'optional',
+            'nonStandard',
+            'highlightCode',
+            'only',
+            'ignore',
+            'jsxPragma',
+            'auxiliaryComment',
+            'sourceMaps',
+            'inputSourceMap',
+            'sourceMapTarget',
+            'sourceFileName',
+            'sourceRoot',
+            'moduleRoot',
+            'modules',
+            'moduleIds',
+            'moduleId',
+            'getModuleId',
+            'resolveModuleSource',
+            'keepModuleIdExtensions',
+            'externalHelpers',
+            'code',
+            'ast',
+            'stage',
+            'compact',
+            'comments',
+            'shouldPrintComment',
+            'metadataUsedHelpers',
+            'env',
+            'retainLines',
+            'babelrc'
+          ]
+        ));
 
         sails.log.verbose("Babel hook activated. Enjoy ES6/7 power in your Sails app.");
       }
-    },
-
+    }
   };
-
 };
