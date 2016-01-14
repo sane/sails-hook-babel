@@ -15,6 +15,8 @@ module.exports = function(sails) {
       __configKey__: {
         // Turn babel compile on by default
         compile: true,
+        // Doesn't import polyfill by default
+        polyfill: false,
         // Activates preset tranformations
         presets: ['es2015'],
         //can be false or a regex. Defaults to node_modules in babel
@@ -40,6 +42,10 @@ module.exports = function(sails) {
         // Load babel
         var options = {};
 
+        if (sails.config[this.configKey].polyfill) {
+          require("babel-polyfill");
+        }
+
         if (sails.config[this.configKey].presets && sails.config[this.configKey].presets.length > 0) {
           options.presets = sails.config[this.configKey].presets;
         }
@@ -56,7 +62,7 @@ module.exports = function(sails) {
           options.extensions = sails.config[this.configKey].extensions;
         }
 
-        require("babel-core/register")(options);
+        require("babel-register")(options);
 
         sails.log.verbose("Babel hook activated. Enjoy ES6/7 power in your Sails app.");
       }
