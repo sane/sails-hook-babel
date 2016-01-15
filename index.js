@@ -1,4 +1,5 @@
 var path = require('path');
+
 module.exports = function(sails) {
 
   return {
@@ -18,13 +19,7 @@ module.exports = function(sails) {
         // Doesn't import polyfill by default
         polyfill: false,
         // Activates preset tranformations
-        presets: ['es2015'],
-        //can be false or a regex. Defaults to node_modules in babel
-        ignore: null,
-        //can be any regex. Only these files will be transpiled
-        only: null,
-        //an array of extensions, defaults to [".es6", ".es", ".jsx", ".js"] in babel
-        extensions: null
+        presets: ['es2015']
       }
     },
 
@@ -34,35 +29,21 @@ module.exports = function(sails) {
      */
     configure: function() {
 
+      var config = sails.config[this.configKey];
+
       // If the hook has been deactivated, just return
-      if (!sails.config[this.configKey].compile) {
+      if (!config.compile) {
         sails.log.verbose("Babel hook deactivated.");
       } else {
 
-        // Load babel
-        var options = {};
-
-        if (sails.config[this.configKey].polyfill) {
+        if (config.polyfill) {
           require("babel-polyfill");
         }
 
-        if (sails.config[this.configKey].presets && sails.config[this.configKey].presets.length > 0) {
-          options.presets = sails.config[this.configKey].presets;
-        }
+        delete config.polyfill;
+        delete config.compile;
 
-        if (sails.config[this.configKey].ignore !== null) {
-          options.ignore = sails.config[this.configKey].ignore;
-        }
-
-        if (sails.config[this.configKey].only) {
-          options.only = sails.config[this.configKey].only;
-        }
-
-        if (sails.config[this.configKey].extensions) {
-          options.extensions = sails.config[this.configKey].extensions;
-        }
-
-        require("babel-register")(options);
+        require("babel-register")(config);
 
         sails.log.verbose("Babel hook activated. Enjoy ES6/7 power in your Sails app.");
       }
