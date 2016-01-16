@@ -1,3 +1,8 @@
+### 6.0.0:
+- [ENHANCEMENT] [Babel 6 support.](http://babeljs.io/blog/2015/10/29/6.0.0/)
+- [ENHANCEMENT] [All Babel 6 options support.](https://babeljs.io/docs/usage/options/)
+- [FEATURE] Source map support for stack traces.
+
 ### 5.0.1
 * [BUGFIX] removed unnecessary console.log
 
