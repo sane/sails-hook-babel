@@ -12,7 +12,6 @@
 * [FEATURE] added options for `ignore`, `only` and `extensions`.
 
 ### 2.1.0
-
 * [ENHANCEMENT] Bumped Babel version.
 * [ENHANCEMENT] Made `experimental` flag configurable.
 * [ENHANCEMENT] Made `loose` flag configurable.

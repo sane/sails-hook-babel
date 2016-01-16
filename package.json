@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/artificialio/sails-hook-babel.git"
+    "url": "git://github.com/sane/sails-hook-babel.git"
   },
   "keywords": [
     "sails",
@@ -25,9 +25,9 @@
   "author": "Markus Padourek",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/artificialio/sails-hook-babel/issues"
+    "url": "https://github.com/sane/sails-hook-babel/issues"
   },
-  "homepage": "https://github.com/artificialio/sails-hook-babel",
+  "homepage": "https://github.com/sane/sails-hook-babel",
   "sails": {
     "isHook": true
   },
