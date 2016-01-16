@@ -1,5 +1,5 @@
 # sails-hook-babel
-[![npm version](https://badge.fury.io/js/sails-hook-babel.svg)](https://npmjs.org/package/sails-hook-babel) [![Dependency Status](https://img.shields.io/david/artificialio/sails-hook-babel.svg?style=flat)](https://david-dm.org/artificialio/sails-hook-babel)
+[![npm version](https://badge.fury.io/js/sails-hook-babel.svg)](https://npmjs.org/package/sails-hook-babel) [![Dependency Status](https://img.shields.io/david/sane/sails-hook-babel.svg?style=flat)](https://david-dm.org/sane/sails-hook-babel)
 
 *Needs at least Sails version 0.11.0 to work*
 
