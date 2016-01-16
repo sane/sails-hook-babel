@@ -1,4 +1,6 @@
-var path = require('path');
+var path               = require('path'),
+    sourceMapSupport   = require('source-map-support'),
+    babelRegisterCache = require('babel-register/lib/cache');
 
 module.exports = function(sails) {
 
@@ -36,6 +38,35 @@ module.exports = function(sails) {
         sails.log.verbose("Babel hook deactivated.");
       } else {
 
+        if (sails.config.environment === 'development') {
+
+          sourceMapSupport.install({
+            retrieveSourceMap: function(file) {
+
+              var cache = babelRegisterCache.get(),
+                  sourceMap = null;
+
+              Object.keys(cache).some(function(hash) {
+
+                var fileCache = cache[hash]; 
+              
+                if (fileCache.options.filename != file) {
+                  return false;
+                }
+
+                sourceMap = {
+                  url: file,
+                  map: fileCache.map
+                };
+
+                return true;
+              });
+
+              return sourceMap;
+            }
+          });
+        }
+
         if (config.polyfill) {
           require("babel-polyfill");
         }
@@ -48,7 +79,5 @@ module.exports = function(sails) {
         sails.log.verbose("Babel hook activated. Enjoy ES6/7 power in your Sails app.");
       }
     },
-
   };
-
 };
