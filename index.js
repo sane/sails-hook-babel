@@ -38,7 +38,7 @@ module.exports = function(sails) {
         sails.log.verbose("Babel hook deactivated.");
       } else {
 
-        if (sails.config.environment === 'development') {
+        if (sails.config.environment != 'production') {
 
           sourceMapSupport.install({
             retrieveSourceMap: function(file) {
