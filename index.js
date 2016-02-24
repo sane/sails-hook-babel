@@ -50,7 +50,7 @@ module.exports = function(sails) {
 
                 var fileCache = cache[hash]; 
               
-                if (fileCache.options.filename != file) {
+                if (typeof fileCache == "undefined" || typeof fileCache.options == "undefined" || fileCache.options.filename != file) {
                   return false;
                 }
 
