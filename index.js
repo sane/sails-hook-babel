@@ -35,7 +35,7 @@ module.exports = function(sails) {
 
       // If the hook has been deactivated, just return
       if (!config.compile) {
-        sails.log.verbose("Babel hook deactivated.");
+        sails.log.verbose('Babel hook deactivated.');
       } else {
 
         if (sails.config.environment != 'production') {
@@ -50,7 +50,9 @@ module.exports = function(sails) {
 
                 var fileCache = cache[hash]; 
               
-                if (typeof fileCache == "undefined" || typeof fileCache.options == "undefined" || fileCache.options.filename != file) {
+                if (typeof fileCache == 'undefined' || typeof fileCache.options == 'undefined' 
+                  || fileCache.options.filename != file
+                ) {
                   return false;
                 }
 
@@ -68,15 +70,15 @@ module.exports = function(sails) {
         }
 
         if (config.polyfill) {
-          require("babel-polyfill");
+          require('babel-polyfill');
         }
 
         delete config.polyfill;
         delete config.compile;
 
-        require("babel-register")(config);
+        require('babel-register')(config);
 
-        sails.log.verbose("Babel hook activated. Enjoy ES6/7 power in your Sails app.");
+        sails.log.verbose('Babel hook activated. Enjoy ES6/7 power in your Sails app.');
       }
     },
   };
