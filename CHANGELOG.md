@@ -1,3 +1,6 @@
+### 6.0.3:
+- [ENHANCEMENT] Dependencies update.
+
 ### 6.0.2:
 - [BUGFIX] ````filename` of undefined``` bug fix
 
