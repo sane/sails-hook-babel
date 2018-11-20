@@ -11,7 +11,7 @@
 
 ### Usage
 
-Just lift your app as normal, and enjoy the future of Javascript today. To see what is possible, see: https://babeljs.io/docs/learn-es6/
+Just lift your app as normal, and enjoy the future of Javascript today. To see what is possible, see: https://babeljs.io/docs/en/learn
 
 ### Configuration
 
@@ -20,7 +20,7 @@ By default, configuration lives in `sails.config.babel`.  The configuration key 
 Parameter      | Type                | Details
 -------------- | ------------------- |:---------------------------------
 compile        | ((boolean)) | Whether or not sails should compile future JS code.  Defaults to `true`.
-polyfill       | ((boolean)) | Whether or not use `babel-polyfill`.  Defaults to `false`.
+polyfill       | ((boolean)) | Whether or not use `@babel/polyfill`.  Defaults to `false`.
 presets        | ((array)) | Which presets to transpile your code with. Defaults to [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env/).
 
 Also you can use [other Babel 7 options](https://babeljs.io/docs/en/options).
