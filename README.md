@@ -21,8 +21,8 @@ Parameter      | Type                | Details
 -------------- | ------------------- |:---------------------------------
 compile        | ((boolean)) | Whether or not sails should compile future JS code.  Defaults to `true`.
 polyfill       | ((boolean)) | Whether or not use `babel-polyfill`.  Defaults to `false`.
-presets        | ((array)) | Which [presets](http://babeljs.io/docs/plugins/#presets) to transpile your code with. Defaults to [es2015](http://babeljs.io/docs/plugins/preset-es2015/).
+presets        | ((array)) | Which presets to transpile your code with. Defaults to [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env/).
 
-Also you can use [other Babel 6 options](https://babeljs.io/docs/usage/options/).
+Also you can use [other Babel 7 options](https://babeljs.io/docs/en/options).
 
 That&rsquo;s it!

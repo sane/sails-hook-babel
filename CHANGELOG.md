@@ -1,3 +1,6 @@
+### 7.0.0:
+- [ENHANCEMENT] Upgrade to Babel 7. Thanks to [@pahan35](https://github.com/pahan35).
+
 ### 6.0.3:
 - [ENHANCEMENT] Dependencies update.
 
